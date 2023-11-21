@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: #<a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: false  # crops the image to make it circular
   more_info: >
-    <p> Bogotá, Colombia</p>
+    <p style="font-style: italic; font-size: smaller;">Bogotá, Colombia</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -17,10 +17,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an economist and industrial engineer with a Master's degree from the [economics department](https://economia.uniandes.edu.co/) of [Universidad de los Andes](https://uniandes.edu.co/). 
-
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am an economist and industrial engineer with a Master's degree in Economics from the [Universidad de los Andes](https://economia.uniandes.edu.co/). I have accrued over 10 years of experience in `research`, data science, analysis, and innovation, which have led me to develop a unique set of skills qualifying me to excel in empirical analysis, extract meaningful insights, patterns, and trends from large and complex datasets while using this information to drive strategic decision-making. Furthermore, my innovative approach to problem-solving has enabled me to identify opportunities for improvement and implement solutions with a measurable impact on driving efficiencies and fostering innovation with data-related products and high-quality research. I have also honed my ability to communicate technical findings to non-technical stakeholders clearly and concisely. Finally, I am thrilled with topics such as impact evaluation of public policies, education, spatial data science, innovation, crime economics, violence prevention, the Colombian criminal justice system, and decisions assisted by machine learning models.

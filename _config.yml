@@ -8,9 +8,9 @@ middle_name: Felipe
 last_name: Camacho
 email: af.camacho.b9@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Andrés Felipe Camacho's  personal page.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> over <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: ML, public-policy, jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
@@ -18,7 +18,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://anfelipecb.github.io # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/
+baseurl:  # the subpath of your site, e.g. /blog/
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -107,7 +107,8 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  Feel free to contact me directly by mail.
+  Feel free to contact me by mail or twitter.
+
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -116,7 +117,7 @@ contact_note: >
 google_analytics:  G-GMBTQB21M5 # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 cronitor_analytics:  # cronitor RUM analytics site ID (format: XXXXXXXXX)
 
-google_site_verification: <meta name="google-site-verification" content="eU9Rg5UrgYzmAtQMtvW1irVsLu0NM0FTzSC-NGTP-CA" />  # your google-site-verification ID (Google Search Console)
+google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------

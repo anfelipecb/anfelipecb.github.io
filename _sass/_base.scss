@@ -17,6 +17,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+  font-family: 'Open Sans', sans-serif;
 }
 
 hr {
@@ -278,11 +279,13 @@ blockquote {
   .navbar-brand.social {
     padding-bottom: 0;
     padding-top: 0;
-    font-size: 1.7rem;
+    font-size: 1rem;
+    display: none;
 
     a {
       i::before {
         color: var(--global-text-color);
+        opacity: 0.5;
         transition-property: all 0.2s ease-in-out;
       }
 
@@ -352,12 +355,13 @@ blockquote {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
 
     a {
       i::before {
         color: var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
+        opacity: 0.5;
       }
 
       &:hover {

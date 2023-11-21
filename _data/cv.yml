@@ -2,18 +2,18 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Andrés Felipe Camacho
+    #- name: Date of Birth
+    #  value: 14th March 1879
     - name: Languages
-      value: English, German
+      value: English, Spanush
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Arts in Economics
+      institution: Universidad de los Andes
+      year: 2017
       description:
         - Description 1.
         - Description 2.
