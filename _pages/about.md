@@ -8,19 +8,48 @@ profile:
   align: left
   image: prof_pic.jpg
   image_circular: false  # crops the image to make it circular
-  more_info: #>
-    #<p style="font-style: italic; font-size: smaller;">Bogotá, Colombia</p>
+  more_info: >
+    <p style="font-style: italic; font-size: smaller;">Currently in: Chicago, IL</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-<div style="display: flex; align-items: flex-start;">
+
+<style>
+  .profile-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .profile-container img {
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .profile-container div {
+    flex: 1;
+  }
+  @media (max-width: 600px) {
+    .profile-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-container img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .profile-container div {
+      text-align: center;
+    }
+  }
+</style>
+<div class="profile-container">
   <div>
-    <p style="font-style: italic; font-size: smaller;"> Living in: Chicago, Ilinois </p>
     <p>Spatial Data Scientist - Computational Social Scientist</p>
-    <p><em>Machine learning for social good</em></p>
+    <p> style="font-style: italic; font-size: smaller;"> Machine learning for social good<</p>
     <p>I am an economist and data scientist with over eight years of experience in econometrics, spatial analysis, and computational methods for social impact. Currently, I am pursuing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, specializing in machine learning, databases, and computational analysis. I have advanced expertise in spatial data science and high-resolution satellite imagery, applying these tools to analyze complex policy challenges in crime, education, and economic development. My technical skill set includes <code>Python, SQL, GIS and cloud computing (AWS, Google Cloud)</code>. With a strong foundation in quantitative research and innovation, I aim to bridge computer science and public policy to drive meaningful social impact.</p>
   </div>
 </div>
