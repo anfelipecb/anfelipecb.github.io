@@ -8,35 +8,35 @@ profile:
   align: left
   image: prof_pic.jpg
   image_circular: false  # crops the image to make it circular
-  more_info: >
-    <p style="font-style: italic; font-size: smaller;">Bogotá, Colombia</p>
+  more_info: #>
+    #<p style="font-style: italic; font-size: smaller;">Bogotá, Colombia</p>
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-{: .justify-text}
-Spatial Data Scientist - Computational Social Scientist
-{: .justify-text}
-*Machine learning for social good*
-
-{: .justify-text}
-I am a data scientist and researcher with a background in economics, industrial engineering, and computational public policy. Currently, I am pursuing an MS in Computational Analysis & Public Policy at the [University of Chicago](https://capp.uchicago.edu/), where I am further refining my expertise in machine learning, databases, and computational policy analysis. My work is driven by a commitment to advancing data-driven policy solutions that enhance social welfare and institutional efficiency.
-
-{: .justify-text}
-My expertise lies at the intersection of data science, machine learning, and policy research, with a strong focus on crime, education, and economic development. Over the past decade, I have applied advanced quantitative methods, spatial analytics, and impact evaluation techniques to inform policy decisions and bridge policy with technological advancements and evidence-based innovation. I have also specialized in Spatial data science, computational analysis and satellite imagery in ```python```, and the use of data to enhance storytelling and data-based decissions. 
-
-
+<div style="display: flex; align-items: flex-start;">
+  <div>
+    <p style="font-style: italic; font-size: smaller;"> Living in: Chicago, Ilinois </p>
+    <p>Spatial Data Scientist - Computational Social Scientist</p>
+    <p><em>Machine learning for social good</em></p>
+    <p>I am an economist and data scientist with over eight years of experience in econometrics, spatial analysis, and computational methods for social impact. Currently, I am pursuing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, specializing in machine learning, databases, and computational analysis. I have advanced expertise in spatial data science and high-resolution satellite imagery, applying these tools to analyze complex policy challenges in crime, education, and economic development. My technical skill set includes <code>Python, SQL, GIS and cloud computing (AWS, Google Cloud)</code>. With a strong foundation in quantitative research and innovation, I aim to bridge computer science and public policy to drive meaningful social impact.</p>
+  </div>
+</div>
 ---
-
-{: .justify-text}
-### Areas of Expertise
-- **Quantitative Research & Data Science**: Expertise in statistical modeling, machine learning, and causal inference to analyze complex social and economic issues.
-- **Spatial Analytics & Remote Sensing**: Application of GIS, remote sensing, and geospatial data analysis to study climate change impacts, urban development, inequality, and human capital.
-- **Artificial Intelligence for Public Policy**: Development of predictive analytics and AI-driven solutions to enhance decision-making in law enforcement, education, and governance.
-- **Scalable Data Pipelines & Infrastructure**: Proficient in Python, SQL, AWS, Google Cloud, and PySpark to build efficient data workflows for policy applications.
-- **Teaching & Knowledge Dissemination**: Instructor of Spatial Analytics in Python & ArcGIS, committed to equipping professionals with practical data science skills. I was also TA for Econometrics and Impact Evaluation at [Universidad de los Andes](https://economia.uniandes.edu.co/).
+<div style="display: flex; align-items: flex-start;">
+  <div style="margin-right: 20px;">
+    <h3>Areas of Expertise</h3>
+    <ul style="text-align: left;">
+      <li><strong>Quantitative Research & Data Science</strong>: Expertise in statistical modeling, machine learning, and causal inference to analyze complex social and economic issues.</li>
+      <li><strong>Spatial Analytics & Remote Sensing</strong>: Application of GIS, remote sensing, and geospatial data analysis to study climate change impacts, urban development, inequality, and human capital.</li>
+      <li><strong>Artificial Intelligence for Public Policy</strong>: Development of predictive analytics and AI-driven solutions to enhance decision-making in law enforcement, education, and governance.</li>
+      <li><strong>Scalable Data Pipelines & Infrastructure</strong>: Proficient in Python, SQL, AWS, Google Cloud, and PySpark to build efficient data workflows for policy applications.</li>
+      <li><strong>Teaching & Knowledge Dissemination</strong>: Instructor of Spatial Analytics in Python & ArcGIS, committed to equipping professionals with practical data science skills. I was also TA for Econometrics and Impact Evaluation at <a href="https://economia.uniandes.edu.co/">Universidad de los Andes</a>.</li>
+    </ul>
+  </div>
+</div>
 
 
  You can find my updated CV [here](assets/pdf/CV Jan 2025 Harris Rev Winter.pdf)
