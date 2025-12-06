@@ -1,81 +1,69 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
+title: Green Space Accessibility for Affordable Housing
+description: Interactive dashboard analyzing disparities in access to high-quality public parks near affordable housing buildings in Chicago
+img: assets/img/ProjectDemo.webm
+importance: 1
 category: work
-giscus_comments: true
+github: uchicago-2025-capp30122/30122-project-treehuggers
+tags: [spatial-analysis, policy, data-visualization, python, dash, gis]
+year: 2025
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Green Space Accessibility for Affordable Housing** is a data science project that analyzes disparities in access to high-quality public parks near affordable housing buildings in Chicago. By combining housing data, census tract information, and spatial/ratings data on city green spaces, we developed an Accessibility Index that quantifies access based on park ratings, size, and proximity.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## What It Does
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The project includes:
+- **Accessibility Index**: A quantitative measure combining park ratings, size, and proximity to affordable housing
+- **Interactive Dashboard**: Built with Python Dash to visualize the Accessibility Index and enable exploration of green space access patterns
+- **Spatial Analysis**: Integration of OpenStreetMap park data, Yelp/Google Places API reviews, and U.S. Census Bureau ACS data
+- **Inequity Identification**: Reveals patterns of inequity in green space access across Chicago neighborhoods
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+## Why I Made It
 
+This project was developed for **CAPP 30122: Data Science for Public Policy** at the University of Chicago. Public parks and green spaces are vital to community well-being, providing spaces for recreation, social connection, and mental health. Ensuring equitable access to high-quality green spaces is a key responsibility for urban planners and policymakers—especially for residents of affordable housing.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Technologies & Skills
 
+- **Python** for data processing and analysis (Pandas, GeoPandas)
+- **OSMnx API** for extracting OpenStreetMap data on Chicago parks
+- **Yelp & Google Places APIs** for park ratings and reviews
+- **U.S. Census Bureau ACS API** for census tract data
+- **Python Dash** for interactive dashboard development
+- **Spatial Analysis** using GeoPandas for proximity calculations and spatial joins
+- **Data Pipeline Design** integrating multiple data sources (housing, parks, reviews, census)
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## Real-World Impact
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+The interactive dashboard empowers planners and decision-makers with a data-driven approach to:
+- **Identify areas with limited access** to quality parks near affordable housing
+- **Promote more equitable urban green space planning** through evidence-based insights
+- **Support policy decisions** on park development and resource allocation
+
+## Team & My Role
+
+**Collaboration:** Begum Akkas, Andrés Camacho, Evan Fantozzi, Grace Kluender
+
+**My contributions:**
+- Designed and developed the end-to-end data pipeline architecture integrating multiple data sources
+- Created the interactive Python Dash dashboard with accessibility index visualizations
+- Developed Kepler.gl maps for spatial visualization of green space accessibility patterns
+- Implemented OpenStreetMap data extraction workflows using OSMnx API
+- Built Google Places API integration for park ratings and reviews data collection
+- Developed comprehensive pytest test suite for key dashboard functionalities and data pipeline components
+- Processed and cleaned multi-source data (housing developments, park locations, reviews, census tracts)
+
+## Source Code
+
+**Repository:** [uchicago-2025-capp30122/30122-project-treehuggers](https://github.com/uchicago-2025-capp30122/30122-project-treehuggers)
+
+## Data Sources
+
+- **OpenStreetMap Chicago Parks Data** - Extracted via OSMnx API for Python
+- **Affordable Rental Housing Developments** - City of Chicago data portal
+- **Yelp Business Search API** - Park ratings and reviews
+- **Google Places Nearby Search API** - Additional park ratings data
+- **U.S. Census Bureau ACS** - Census tract demographic and economic data

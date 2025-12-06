@@ -12,51 +12,83 @@ layout: default
         </header>
 
         <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
-
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image
-              cache_bust=true -%}
-            {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
-            </div>
-            {%- endif %}
-          </div>
-          {%- endif %}
-
           <div class="clearfix">
             {{ content }}
           </div>
 
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
+          <!-- Selected Work -->
+          {% if page.projects -%}
+            <h2 style="border-top: 1px solid var(--global-divider-color); padding-top: 1rem; margin-top: 2rem; text-transform: capitalize;"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected work</a></h2>
+            {%- assign sorted_projects = site.projects | sort: "importance" | reverse | limit: 2 -%}
+            <div class="projects">
+              <div class="row">
+                {%- for project in sorted_projects -%}
+                  <div class="col-md-6 mb-3">
+                    {% if project.redirect -%}
+                    <a href="{{ project.redirect }}">
+                    {% elsif project.website -%}
+                    <a href="{{ project.website }}" target="_blank">
+                    {%- else -%}
+                    <a href="{{ project.url | relative_url }}">
+                    {%- endif %}
+                      <div class="card hoverable h-100">
+                        {%- if project.img %}
+                        {%- include figure.html
+                          path=project.img
+                          alt="project thumbnail" -%}
+                        {%- endif %}
+                        <div class="card-body">
+                          <h2 class="card-title text-capitalize">{{ project.title }}</h2>
+                          <p class="card-text">{{ project.description }}</p>
+                          {%- if project.tags -%}
+                          <div class="project-tags mb-2">
+                            {%- for tag in project.tags -%}
+                            <span class="badge badge-secondary mr-1">{{ tag }}</span>
+                            {%- endfor %}
+                          </div>
+                          {%- endif %}
+                          <div class="row ml-1 mr-1 p-0">
+                            {%- if project.github -%}
+                            <div class="github-icon">
+                              <div class="icon" data-toggle="tooltip" title="Code Repository">
+                                <a href="https://github.com/{{ project.github }}" target="_blank"><i class="fab fa-github gh-icon"></i></a>
+                              </div>
+                            </div>
+                            {%- endif %}
+                            {%- if project.website -%}
+                            <div class="website-icon ml-2">
+                              <div class="icon" data-toggle="tooltip" title="View Project">
+                                <a href="{{ project.website }}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                              </div>
+                            </div>
+                            {%- endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                {%- endfor %}
+              </div>
+            </div>
+            <p><a href="{{ '/projects/' | relative_url }}">View all projects →</a></p>
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2 style="text-transform: capitalize;"><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
             {%- include selected_papers.html %}
+          {%- endif %}
+
+          <!-- Latest posts -->
+          {% if page.latest_posts -%}
+            <h2 style="text-transform: capitalize;"><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+            {%- include latest_posts.html %}
+          {%- endif %}
+
+          <!-- News -->
+          {% if page.news and site.announcements.enabled -%}
+            <h2 style="text-transform: capitalize;"><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            {%- include news.html limit=true %}
           {%- endif %}
 
           <!-- Social -->

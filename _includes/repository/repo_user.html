@@ -1,6 +1,6 @@
 <div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}">
-    <img class="repo-img-light w-100" alt="{{ include.username }}" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true">
-    <img class="repo-img-dark w-100" alt="{{ include.username }}" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true">
+  <a href="https://github.com/{{ include.username }}" target="_blank">
+    <img class="repo-img-light w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true&hide_border=true&bg_color=fff" onerror="this.onerror=null; this.parentElement.innerHTML='<p>GitHub Stats temporarily unavailable. <a href=\'https://github.com/{{ include.username }}\' target=\'_blank\'>View on GitHub</a></p>'">
+    <img class="repo-img-dark w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true&hide_border=true" onerror="this.onerror=null; this.parentElement.innerHTML='<p>GitHub Stats temporarily unavailable. <a href=\'https://github.com/{{ include.username }}\' target=\'_blank\'>View on GitHub</a></p>'">
   </a>
 </div>

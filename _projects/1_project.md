@@ -1,81 +1,74 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
-importance: 1
+title: Heat, Households, and Human Development
+description: Interactive data visualization exploring the relationship between rising temperatures and impacts on family life and child development
+img: assets/img/ClimateEffects.png
+importance: 2
 category: work
-related_publications: einstein1956investigations, einstein1950meaning
+github: anfelipecb/climate-development
+website: https://anfelipecb.github.io/climate-development/
+tags: [satellite-imagery, research, vega-altair, data-visualization]
+year: 2025
+related_publications: cuartas2025high
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**Heat, Households, and Human Development** is an interactive data story that visualizes the relationship between rising temperatures and their impacts on family life and child development. This project links climate data with household survey data to explore two critical questions: (1) How does heat exposure affect parenting behaviors and discipline practices? (2) How does heat influence early childhood development outcomes?
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## What It Does
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The interactive visualization combines:
+- **Global temperature trends** from ERA5-Land climate reanalysis (1950-present)
+- **Spatial data linkage methodology** connecting ~21,000 children across 6 countries to precise climate data
+- **Exploratory patterns** that motivated two research papers on heat's effects on violent child punishment and developmental delays
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+The visualizations reveal that temperature impacts are not uniformly distributed—they concentrate among vulnerable populations including poorer households, urban dwellers, and communities without adequate water and sanitation infrastructure.
 
+## Why I Made It
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This project was developed for **CAPP 30239: Data Visualization for Policy Analysis** at the University of Chicago. The goal was to create an engaging, accessible data story that communicates complex research findings to both academic and policy audiences. The visualization demonstrates how climate change is not just an environmental issue, but a human development crisis affecting the most vulnerable children from their earliest years.
 
+## Technologies & Skills
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **D3.js** for interactive visualizations and data binding
+- **Python** for data processing and analysis (Pandas, NumPy)
+- **Geospatial analysis** linking ERA5-Land climate grids (~0.1° resolution) with UNICEF MICS survey clusters
+- **HTML/CSS/JavaScript** for the interactive web interface
+- **Data pipeline design** processing 250+ GB of climate and survey data
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+## Real-World Impact
+
+This visualization supports two peer-reviewed research papers:
+
+1. **Cuartas, J., & Camacho, A. (2025).** High temperatures and violent child punishment at home: Evidence from six countries. *Psychology of Violence*, 15(6), 670–681. [View publication](https://psycnet.apa.org/record/2026-64418-001)
+
+2. **Cuartas, J., Balza, L. H., Camacho, A., & Gómez-Parra, N. (2025).** Ambient Heat and Early Childhood Development: A Cross-National Analysis. *Journal of Child Psychology and Psychiatry* (forthcoming)
+
+The research findings have policy implications for:
+- Climate adaptation strategies targeting vulnerable families
+- Social service systems that account for seasonal heat stress
+- Equity-focused interventions addressing heat impacts on child development
+
+## Team & My Role
+
+**Collaboration:** Jorge Cuartas (lead researcher), Andrés Felipe Camacho (data scientist & visualization developer)
+
+**My contributions:**
+- Designed and implemented the end-to-end data pipeline linking ERA5-Land climate data with MICS survey clusters
+- Built the interactive D3.js visualizations showing temperature trends, anomalies, and spatial patterns
+- Developed the geospatial linkage methodology connecting ~3,600 geographic clusters to precise climate grids
+- Created the web interface and data story narrative structure
+- Processed and analyzed 250+ GB of climate reanalysis data
+
+## Source Code
+
+**Repository:** [anfelipecb/climate-development](https://github.com/anfelipecb/climate-development)
+
+**Live Visualization:** [anfelipecb.github.io/climate-development/](https://anfelipecb.github.io/climate-development/)
+
+## Data Sources
+
+- **UNICEF Multiple Indicator Cluster Surveys (MICS)** - Geocoded household and child-level microdata from 6 countries (2017-2020)
+- **ERA5-Land Climate Reanalysis** - 2-meter maximum temperature at ~0.1° spatial resolution (1950-present)
+- **WMO Climatological Normals** - 1991-2020 baseline for temperature anomaly calculations
