@@ -4,13 +4,13 @@
  ******************************************************************************/
 
 // Colors
-$red-color:           #FF3636 !default;
-$red-color-dark:      #B71C1C !default;
+$red-color:           #FF6B6B !default;  // Lighter professional red (was #FF3636)
+$red-color-dark:      #EE5A6F !default;  // Slightly darker red variant
 $orange-color:        #F29105 !default;
-$blue-color:          #0076df !default;
-$blue-color-dark:     #00369f !default;
-$cyan-color:          #2698BA !default;
-$light-cyan-color:    lighten($cyan-color, 25%);
+$blue-color:          #2563EB !default;
+$blue-color-dark:     #1E40AF !default;
+$cyan-color:          #FF8E8E !default;  // Glowing red-pink for dark mode accent
+$light-cyan-color:    lighten($cyan-color, 15%);
 $green-color:         #00ab37 !default;
 $green-color-lime:    #B7D12A !default;
 $green-color-dark:    #009f06 !default;

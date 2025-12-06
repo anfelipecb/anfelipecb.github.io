@@ -1,15 +1,17 @@
 ---
 layout: page
-title: projects
+title: selected work
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
+description: A collection of data science and policy projects.
+nav: true
 nav_order: 2
 display_categories: [work, fun]
 horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
