@@ -1,6 +1,16 @@
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.username }}" target="_blank">
-    <img class="repo-img-light w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true&hide_border=true&bg_color=fff" onerror="this.onerror=null; this.parentElement.innerHTML='<p>GitHub Stats temporarily unavailable. <a href=\'https://github.com/{{ include.username }}\' target=\'_blank\'>View on GitHub</a></p>'">
-    <img class="repo-img-dark w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true&hide_border=true" onerror="this.onerror=null; this.parentElement.innerHTML='<p>GitHub Stats temporarily unavailable. <a href=\'https://github.com/{{ include.username }}\' target=\'_blank\'>View on GitHub</a></p>'">
+    <img class="repo-img-light w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true&hide_border=true&bg_color=fff" onerror="this.style.display='none'; document.querySelector('.repo-fallback-light[data-username=\'{{ include.username }}\']').style.display='block';">
+    <img class="repo-img-dark w-100" alt="{{ include.username }} GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true&hide_border=true" onerror="this.style.display='none'; document.querySelector('.repo-fallback-dark[data-username=\'{{ include.username }}\']').style.display='block';">
   </a>
+  <div class="card p-3 repo-fallback-light" data-username="{{ include.username }}" style="display:none; min-width: 300px;">
+    <h5><i class="fab fa-github"></i> {{ include.username }}</h5>
+    <p class="mb-2">GitHub Profile</p>
+    <a href="https://github.com/{{ include.username }}" target="_blank" class="btn btn-sm btn-outline-primary">View Profile →</a>
+  </div>
+  <div class="card p-3 repo-fallback-dark" data-username="{{ include.username }}" style="display:none; min-width: 300px;">
+    <h5><i class="fab fa-github"></i> {{ include.username }}</h5>
+    <p class="mb-2">GitHub Profile</p>
+    <a href="https://github.com/{{ include.username }}" target="_blank" class="btn btn-sm btn-outline-primary">View Profile →</a>
+  </div>
 </div>
