@@ -154,7 +154,12 @@ social: true  # includes social icons at the bottom of the page
       cache_bust=true %}
   </div>
   <div class="profile-content">
-    <p style="font-style: italic; font-size: smaller;"> In: Chicago, Illinois </p>
+    <p style="font-style: italic; font-size: smaller;"> 
+      In: Chicago, Illinois | 
+      <a href="https://github.com/anfelipecb" style="color: inherit; text-decoration: none; font-style: normal; font-weight: bold;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </p>
     <p><strong>Data Scientist & ML Engineer</strong> | <em>Machine Learning for Social Impact</em></p>
     <p>Data scientist and economist with 8+ years of experience building ML models and data pipelines for policy impact. Currently pursuing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, where I serve as a Teaching Assistant for Computer Science with Applications and Data Science Clinic. I specialize in machine learning, spatial analytics, and large-scale data processing using <code>Python, SQL, PyTorch, AWS, and Google Cloud</code>. My work focuses on developing predictive models and scalable systems that inform evidence-based policy decisions in criminal justice, education, and climate change.</p>
     

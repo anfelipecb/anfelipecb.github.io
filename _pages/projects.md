@@ -1,6 +1,6 @@
 ---
 layout: page
-title: selected work
+title: projects
 permalink: /projects/
 description: A collection of data science and policy projects.
 nav: true
@@ -10,6 +10,19 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<style>
+  .post-header h1.post-title {
+    display: none;
+  }
+  .custom-page-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+</style>
+
+<h1 class="custom-page-title">selected work</h1>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="{{ '/assets/js/project-filters.js' | relative_url }}"></script>
 <div class="projects">
