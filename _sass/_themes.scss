@@ -45,6 +45,12 @@
   .repo-img-dark {
     display: none;
   }
+  .repo-fallback-light {
+    display: none !important;
+  }
+  .repo-fallback-dark {
+    display: none !important;
+  }
 }
 
 html[data-theme='dark'] {
@@ -90,5 +96,11 @@ html[data-theme='dark'] {
   }
   .repo-img-dark {
     display: block;
+  }
+  .repo-fallback-light {
+    display: none !important;
+  }
+  .repo-fallback-dark {
+    display: block !important;
   }
 }

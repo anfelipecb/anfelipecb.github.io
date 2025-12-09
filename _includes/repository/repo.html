@@ -8,7 +8,17 @@
 
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.repository }}" target="_blank">
-    <img class="repo-img-light w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}&hide_border=true" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'card p-3\'><h5>{{ repo_url[1] }}</h5><p><a href=\'https://github.com/{{ include.repository }}\' target=\'_blank\'>View on GitHub →</a></p></div>'">
-    <img class="repo-img-dark w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}&hide_border=true" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'card p-3\'><h5>{{ repo_url[1] }}</h5><p><a href=\'https://github.com/{{ include.repository }}\' target=\'_blank\'>View on GitHub →</a></p></div>'">
+    <img class="repo-img-light w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}&hide_border=true" onerror="this.style.display='none'; document.querySelector('.repo-fallback-light[data-repo=\'{{ include.repository }}\']').style.display='block';">
+    <img class="repo-img-dark w-100" alt="{{ include.repository }}" src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}&hide_border=true" onerror="this.style.display='none'; document.querySelector('.repo-fallback-dark[data-repo=\'{{ include.repository }}\']').style.display='block';">
   </a>
+  <div class="card p-3 repo-fallback-light" data-repo="{{ include.repository }}" style="display:none; min-width: 300px;">
+    <h5><i class="fab fa-github"></i> {{ repo_url[1] }}</h5>
+    <p class="mb-2">Repository</p>
+    <a href="https://github.com/{{ include.repository }}" target="_blank" class="btn btn-sm btn-outline-primary">View on GitHub →</a>
+  </div>
+  <div class="card p-3 repo-fallback-dark" data-repo="{{ include.repository }}" style="display:none; min-width: 300px;">
+    <h5><i class="fab fa-github"></i> {{ repo_url[1] }}</h5>
+    <p class="mb-2">Repository</p>
+    <a href="https://github.com/{{ include.repository }}" target="_blank" class="btn btn-sm btn-outline-primary">View on GitHub →</a>
+  </div>
 </div>
