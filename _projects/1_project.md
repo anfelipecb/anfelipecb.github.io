@@ -3,7 +3,7 @@ layout: page
 title: Heat, Households, and Human Development
 description: Interactive data visualization exploring the relationship between rising temperatures and impacts on family life and child development
 img: assets/img/ClimateEffects.png
-importance: 2
+importance: 1
 category: work
 github: anfelipecb/climate-development
 website: https://anfelipecb.github.io/climate-development/

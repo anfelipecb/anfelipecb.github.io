@@ -19,7 +19,7 @@ layout: default
           <!-- Selected Work -->
           {% if page.projects -%}
             <h2 style="border-top: 1px solid var(--global-divider-color); padding-top: 1rem; margin-top: 2rem; text-transform: capitalize;"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected work</a></h2>
-            {%- assign sorted_projects = site.projects | sort: "importance" | reverse | limit: 2 -%}
+            {%- assign sorted_projects = site.projects | sort: "importance" | limit: 2 -%}
             <div class="projects">
               <div class="row">
                 {%- for project in sorted_projects -%}
