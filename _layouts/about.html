@@ -28,8 +28,10 @@ layout: default
                     <a href="{{ project.redirect }}">
                     {% elsif project.website -%}
                     <a href="{{ project.website }}" target="_blank">
-                    {%- else -%}
+                    {%- elsif project.url -%}
                     <a href="{{ project.url | relative_url }}">
+                    {%- else -%}
+                    <a href="#">
                     {%- endif %}
                       <div class="card hoverable h-100">
                         {%- if project.img %}

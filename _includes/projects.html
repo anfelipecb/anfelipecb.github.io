@@ -5,9 +5,11 @@
   <a href="{{ project.redirect }}">
   {% elsif project.website -%}
   <a href="{{ project.website }}" target="_blank">
-    {%- else -%}
-    <a href="{{ project.url | relative_url }}">
-      {%- endif %}
+  {%- elsif project.url -%}
+  <a href="{{ project.url | relative_url }}">
+  {%- else -%}
+  <a href="#">
+  {%- endif %}
       <div class="card hoverable">
         {%- if project.img %}
         {%- include figure.html
