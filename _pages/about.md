@@ -238,4 +238,4 @@ social: true  # includes social icons at the bottom of the page
     });
 </script>
 
-You can find my updated CV [here](assets/pdf/Camacho_Andres_CV_2025_Winter.pdf)
+You can find my updated CV [here](assets/pdf/Camacho_Andres_CV_2026.pdf)
