@@ -128,7 +128,7 @@ tags: [tag1, tag2, tag3]
 
 ### Updating CV
 
-- Replace `assets/pdf/Camacho_Andres_CV_2025_Winter.pdf` with your CV
+- Replace `assets/pdf/Camacho_Andres_CV_2026.pdf` with your CV
 - Update the link in `_pages/about.md`
 
 ### Color Scheme
