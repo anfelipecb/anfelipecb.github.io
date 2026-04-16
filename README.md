@@ -1,19 +1,8 @@
-# Andrés Felipe Camacho - Personal Website
+# Andres Felipe Camacho - Personal Website
 
-A professional portfolio and research website built with Jekyll, based on the al-folio theme. This site showcases data science projects, academic publications, and professional experience in machine learning and computational policy analysis.
+A professional portfolio and research website built with Jekyll, based on the al-folio theme. Showcases data science projects, academic publications, and professional experience in machine learning and spatial data science.
 
 **Live Site:** [anfelipecb.github.io](https://anfelipecb.github.io)
-
----
-
-## Features
-
-- **Project-Focused Design**: Homepage prioritizes data science projects with interactive visualizations
-- **Interactive Expertise Tags**: D3.js-powered tags with expandable descriptions
-- **Publication Management**: Automated bibliography using Jekyll Scholar
-- **Responsive Layout**: Mobile-friendly design with dark mode support
-- **Optimized Media**: WebM video support for efficient project demonstrations
-- **Professional Styling**: Customized color scheme and typography
 
 ---
 
@@ -26,25 +15,20 @@ A professional portfolio and research website built with Jekyll, based on the al
 
 ### Running Locally
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/anfelipecb/anfelipecb.github.io.git
 cd anfelipecb.github.io
-```
-
-2. Start the development server:
-```bash
 docker compose up
 ```
 
-3. Open your browser to `http://localhost:4000`
+Open `http://localhost:4000`. The site rebuilds automatically on file changes.
 
-The site will automatically rebuild when you make changes to files.
+Stop with `docker compose down`.
 
-### Stopping the Server
-
+After `Gemfile` or `Dockerfile` changes:
 ```bash
-docker compose down
+docker compose build --no-cache
+docker compose up
 ```
 
 ---
@@ -53,218 +37,97 @@ docker compose down
 
 ```
 .
-├── _pages/               # Main pages (about, projects, publications, etc.)
-├── _projects/            # Individual project markdown files
-├── _posts/               # Blog posts
-├── _bibliography/        # BibTeX files for publications
-├── _layouts/             # HTML templates
-├── _includes/            # Reusable HTML components
-├── _sass/                # SCSS stylesheets
+├── _pages/               # Main pages (About, Projects, Publications, CV)
+├── _projects/            # Individual project markdown files (8 projects)
+├── _bibliography/        # BibTeX file for publications
+├── _layouts/             # HTML templates (about.html, page.html, bib.html)
+├── _includes/            # Reusable components
+│   ├── project_card.html # Shared card partial (used by homepage + projects page)
+│   ├── tag_capitalize.html # Tag display name capitalization
+│   ├── projects.html     # CSS Grid wrapper for /projects/ page
+│   └── social.html       # Social icons (GitHub, LinkedIn, X, etc.)
+├── _sass/                # SCSS stylesheets (_base.scss has card styles)
 ├── assets/
-│   ├── img/             # Images and project thumbnails
-│   ├── js/              # JavaScript files
-│   └── pdf/             # PDF documents (CV, papers, etc.)
-└── _config.yml          # Site configuration
+│   ├── img/             # Images, .webm videos, publication previews
+│   ├── js/              # project-filters.js (tag filtering on /projects/)
+│   └── pdf/             # CV, papers, project docs
+├── _config.yml          # Site configuration (max_width: 1200px)
+└── .github/workflows/   # deploy.yml (Jekyll build + push to gh-pages)
 ```
 
 ---
 
-## Customization Guide
+## Adding a New Project
 
-### Updating Personal Information
-
-**Profile Photo:**
-- Replace `assets/img/prof_pic.jpeg` with your photo
-- Update `_pages/about.md` if needed
-
-**Profile Description:**
-- Edit the description in `_pages/about.md` under the profile section
-
-**Areas of Expertise:**
-- Modify the `expertise` array in `_pages/about.md` (around line 171)
-- Update titles and descriptions as needed
-
-**Social Links:**
-- Edit `_config.yml` to update social media profiles
-
-### Adding Projects
-
-1. Create a new markdown file in `_projects/`:
-```markdown
+1. Create `_projects/N_project.md`:
+```yaml
 ---
 layout: page
 title: Your Project Title
-description: Brief project description
-img: assets/img/your-thumbnail.png
-importance: 1
-category: work
+description: Brief description
+img: assets/img/your-thumbnail.png  # or .webm
+importance: N  # lower = shown first, homepage shows 0-5
+category: student-work  # or work
 github: username/repository
-website: https://your-project-url.com
-tags: [tag1, tag2, tag3]
+website: https://your-project-url.com  # optional
+tags: [ml, geospatial, research]  # from 6 categories below
+year: 2025
 ---
 
 ## Project content here
 ```
 
-2. Add your project image to `assets/img/`
+2. Add image/video to `assets/img/`
 
-3. Set `importance` value (lower numbers appear first)
+3. Available tags (6 categories):
+   - `ml` (Machine Learning)
+   - `ai-agents` (AI Agents)
+   - `geospatial` (Geospatial)
+   - `data-viz` (Data Viz)
+   - `devops` (DevOps)
+   - `research` (Research)
 
-### Adding Publications
+No template changes needed. The shared `project_card.html` partial renders cards on both pages.
 
-1. Add BibTeX entry to `_bibliography/papers.bib`:
+## Adding Publications
+
+Add BibTeX entry to `_bibliography/papers.bib`:
 ```bibtex
-@article{yourkey2025,
-  title={Your Paper Title},
-  author={Your Name and Co-authors},
-  journal={Journal Name},
+@article{key2025,
+  title={Paper Title},
+  author={Name and Co-authors},
+  journal={Journal},
   year={2025},
-  selected={true},  # Shows on homepage
-  preview={your-image.png}
+  selected={true},  % shows on homepage (max 3)
+  preview={image.png}  % in assets/img/publication_preview/
 }
 ```
-
-2. Add preview image to `assets/img/publication_preview/`
-
-### Updating CV
-
-- Replace `assets/pdf/Camacho_CV_Base.pdf` with your CV
-- Update the link in `_pages/about.md`
-
-### Color Scheme
-
-Edit `_sass/_variables.scss` to change colors:
-- `$red-color`: Primary theme color (light mode)
-- `$cyan-color`: Primary theme color (dark mode)
-
-Project tag colors are in `_sass/_base.scss` under `.projects .project-tags .badge`
 
 ---
 
 ## Deployment
 
-This site uses GitHub Pages for hosting. Changes pushed to the `master` branch are automatically deployed.
+Pushing to `master` triggers the deploy workflow:
+1. `.github/workflows/deploy.yml` builds the Jekyll site
+2. Built `_site/` is pushed to the `gh-pages` branch
+3. GitHub Pages serves from `gh-pages`
 
-### Deployment Workflow
-
-1. Make changes in a feature branch:
-```bash
-git checkout -b feature/your-feature-name
-```
-
-2. Test locally with Docker
-
-3. Commit and push:
-```bash
-git add .
-git commit -m "Description of changes"
-git push origin feature/your-feature-name
-```
-
-4. Create a pull request to `master`
-
-5. Merge PR - GitHub Pages will automatically build and deploy
-
-### Build Time
-
-Typical deployment takes 2-5 minutes. Check the Actions tab on GitHub to monitor build progress.
-
----
-
-## Advanced Customization
-
-### Adding Custom JavaScript
-
-Place custom scripts in `assets/js/` and reference them in your pages:
-```markdown
-<script src="{{ '/assets/js/your-script.js' | relative_url }}"></script>
-```
-
-### Modifying Layouts
-
-Edit files in `_layouts/` to change page structure:
-- `about.html`: Homepage layout
-- `page.html`: Standard page layout
-- `post.html`: Blog post layout
-
-### Adding New Sections
-
-1. Create include file in `_includes/your-section.html`
-2. Reference it in `_layouts/about.html`:
-```liquid
-{% include your-section.html %}
-```
+Deploy takes 2-3 minutes. Monitor at the Actions tab.
 
 ---
 
 ## Technology Stack
 
-- **Static Site Generator**: Jekyll 4.3.3
-- **Theme Base**: al-folio (heavily customized)
-- **Styling**: SCSS, Bootstrap 5
-- **Interactive Elements**: D3.js v7
+- **Static Site Generator**: Jekyll (al-folio theme, heavily customized)
+- **Styling**: SCSS, Bootstrap
+- **Interactive Elements**: D3.js (expertise tags), vanilla JS (tag filters)
 - **Bibliography**: Jekyll Scholar
-- **Hosting**: GitHub Pages
-- **Containerization**: Docker
-
----
-
-## Troubleshooting
-
-### Port Already in Use
-
-The compose file maps **host port 4000** to the Jekyll server in the container. If `4000` is taken, edit `docker-compose.yml` and change the first number, e.g. `"4001:8080"`, then open `http://localhost:4001`.
-
-```bash
-docker compose down
-docker compose up
-```
-
-### Changes Not Appearing
-
-1. Check for syntax errors in modified files
-2. Restart Docker container:
-```bash
-docker compose restart
-```
-
-3. Clear browser cache (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)
-
-### Docker Build Issues
-
-If gems fail to install:
-```bash
-docker compose down
-docker compose build --no-cache
-docker compose up
-```
+- **Hosting**: GitHub Pages (gh-pages branch)
+- **Local Dev**: Docker
 
 ---
 
 ## License
 
-The al-folio theme is available as open source under the terms of the MIT License.
-
-Content and customizations: Copyright (c) 2025 Andrés Felipe Camacho
-
----
-
-## Acknowledgments
-
-This site is built on the [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme, created by Maruan Al-Shedivat. The theme has been extensively customized for a project-focused portfolio design.
-
----
-
-## Contact
-
-For questions about this site or its implementation:
-- **GitHub**: [@anfelipecb](https://github.com/anfelipecb)
-- **Website**: [anfelipecb.github.io](https://anfelipecb.github.io)
-
----
-
-## Related Documentation
-
-- `UPSTREAM_UPDATE_GUIDE.md`: Instructions for merging updates from al-folio
-- `OPTIMIZE_GIF.md`: Guide for converting GIFs to WebM format
-- `TEST_BRANCH_CHANGES.md`: Development workflow documentation
+The al-folio theme is available under the MIT License.
+Content: Copyright (c) 2026 Andres Felipe Camacho
