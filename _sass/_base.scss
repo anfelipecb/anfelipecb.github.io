@@ -687,7 +687,7 @@ footer.sticky-bottom {
       width: 100%;
       height: 100%;
       max-height: none;
-      object-fit: contain;
+      object-fit: cover;
       min-height: 0;
     }
 
@@ -700,36 +700,38 @@ footer.sticky-bottom {
       padding: 0.4rem 0.5rem !important;
     }
 
-    // Small title — clamped to 2 lines max
+    // Title — larger than bio, bold, clamped to 2 lines
     .card-title {
-      font-size: 0.6rem !important;
-      margin-bottom: 0.15rem !important;
-      line-height: 1.2 !important;
-      font-weight: 600 !important;
+      font-size: 1.1rem !important;
+      margin-bottom: 0.3rem !important;
+      line-height: 1.25 !important;
+      font-weight: 700 !important;
+      font-family: 'Open Sans', sans-serif !important;
       display: -webkit-box !important;
       -webkit-line-clamp: 2 !important;
       -webkit-box-orient: vertical !important;
       overflow: hidden !important;
     }
 
-    // Compact description — clamped to 2 lines max
+    // Description — same size as bio text, clamped to 2 lines
     .card-text {
-      font-size: 0.5rem !important;
-      line-height: 1.25 !important;
-      margin-bottom: 0.2rem !important;
+      font-size: 1rem !important;
+      line-height: 1.4 !important;
+      margin-bottom: 0.3rem !important;
+      font-family: 'Open Sans', sans-serif !important;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    // Compact tags
+    // Tags
     .project-tags {
-      margin-bottom: 0.2rem !important;
+      margin-bottom: 0.25rem !important;
 
       .badge {
-        font-size: 0.45rem !important;
-        padding: 0.1em 0.3em !important;
+        font-size: 0.6rem !important;
+        padding: 0.2em 0.4em !important;
       }
     }
 
@@ -877,10 +879,11 @@ footer.sticky-bottom {
       }
 
       .card-title {
-        font-size: 0.7rem !important;
-        margin-bottom: 0.2rem !important;
-        line-height: 1.2 !important;
-        font-weight: 600 !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 0.3rem !important;
+        line-height: 1.25 !important;
+        font-weight: 700 !important;
+        font-family: 'Open Sans', sans-serif !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important;
         -webkit-box-orient: vertical !important;
@@ -891,8 +894,9 @@ footer.sticky-bottom {
         flex: 1 1 auto;
         overflow-wrap: anywhere;
         word-break: break-word;
-        font-size: 0.58rem !important;
-        line-height: 1.3 !important;
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+        font-family: 'Open Sans', sans-serif !important;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -900,8 +904,8 @@ footer.sticky-bottom {
       }
 
       .project-tags .badge {
-        font-size: 0.5rem !important;
-        padding: 0.15em 0.3em !important;
+        font-size: 0.6rem !important;
+        padding: 0.2em 0.4em !important;
       }
 
       .card figure {
