@@ -713,12 +713,14 @@ footer.sticky-bottom {
       overflow: hidden !important;
     }
 
-    // Description — same size as bio text, clamped to 2 lines
+    // Description — exactly matches bio text style
     .card-text {
       font-size: 1rem !important;
-      line-height: 1.4 !important;
+      line-height: 1.5 !important;
       margin-bottom: 0.3rem !important;
       font-family: 'Open Sans', sans-serif !important;
+      font-weight: 300 !important;
+      color: var(--global-text-color) !important;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -895,8 +897,10 @@ footer.sticky-bottom {
         overflow-wrap: anywhere;
         word-break: break-word;
         font-size: 1rem !important;
-        line-height: 1.4 !important;
+        line-height: 1.5 !important;
         font-family: 'Open Sans', sans-serif !important;
+        font-weight: 300 !important;
+        color: var(--global-text-color) !important;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
