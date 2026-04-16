@@ -1,0 +1,9 @@
+<!-- Capitalize tag badges using display name map -->
+<script>
+  var dn = {'ml':'Machine Learning','ai-agents':'AI Agents','geospatial':'Geospatial','data-viz':'Data Viz','devops':'DevOps','research':'Research'};
+  document.querySelectorAll('.project-tags .badge').forEach(function(b) {
+    var t = b.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+    b.setAttribute('data-tag', t);
+    b.textContent = dn[t] || t;
+  });
+</script>

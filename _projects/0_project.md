@@ -7,7 +7,7 @@ importance: 3
 category: student-work
 github: anfelipecb/migr_deport_interactive
 website: https://anfelipecb.github.io/migr_deport_interactive/
-tags: [python, javascript, d3, geospatial, policy, data-visualization]
+tags: [data-viz, geospatial, research]
 year: 2025
 ---
 

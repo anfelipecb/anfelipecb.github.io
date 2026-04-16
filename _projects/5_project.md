@@ -6,7 +6,7 @@ img: assets/img/Adversarial.png
 importance: 2
 category: student-work
 github: anfelipecb/AI-Agents-Final-Project
-tags: [python, ai-agents, llm, nlp, machine-learning]
+tags: [ai-agents, ml]
 year: 2025
 ---
 

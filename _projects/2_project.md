@@ -6,7 +6,7 @@ img: assets/img/ProjectDemo.webm
 importance: 5
 category: student-work
 github: uchicago-2025-capp30122/30122-project-treehuggers
-tags: [python, dash, gis, spatial-analysis, policy]
+tags: [geospatial, data-viz, research]
 year: 2025
 ---
 

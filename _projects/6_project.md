@@ -6,7 +6,7 @@ img: assets/img/EventDriven.png
 importance: 6
 category: student-work
 github: anfelipecb/ecommerce_event_driven
-tags: [python, javascript, devops, cloud]
+tags: [devops]
 year: 2025
 ---
 

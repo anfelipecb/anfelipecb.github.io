@@ -5,7 +5,7 @@ description: Production-grade CI/CD pipeline with Git Flow, Jenkins, Docker, Ter
 img: assets/img/FinalPrDevVOps.png
 importance: 7
 category: student-work
-tags: [terraform, devops, cloud]
+tags: [devops]
 year: 2025
 ---
 

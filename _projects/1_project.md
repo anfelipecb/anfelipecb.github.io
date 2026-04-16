@@ -7,7 +7,7 @@ importance: 4
 category: work
 github: anfelipecb/climate-development
 website: https://anfelipecb.github.io/climate-development/
-tags: [python, research, climate, geospatial, data-visualization]
+tags: [research, geospatial, data-viz]
 year: 2025
 related_publications: cuartas2025high
 ---

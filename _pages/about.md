@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: 
 
@@ -160,7 +160,7 @@ social: true  # includes social icons at the bottom of the page
         <i class="fab fa-github"></i> GitHub
       </a>
     </p>
-    <p><strong>Spatial Data Scientist & Economist</strong> | <em>Building ML Systems for Social Impact</em></p>
+    <p><em>Building ML Systems for Social Impact</em></p>
     <p>Spatial data scientist and economist with 8+ years of experience building ML models, geospatial pipelines, and data infrastructure. Currently completing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, where I serve as a Teaching Assistant for Machine Learning, Computer Science with Applications, and Data Science Clinic. I work across the full stack of data science: ensemble ML models for conflict prediction, multi-agent LLM systems for policy deliberation, satellite imagery pipelines, and interactive visualizations, all using <code>Python, PyTorch, SQL, AWS, and Google Cloud</code>. My research on climate impacts on child development has been published in peer-reviewed journals.</p>
     
     <div class="expertise-section">

@@ -1,56 +1,5 @@
-<!-- _includes/projects.html — card link must not wrap inner <a> (invalid HTML; breaks layout in browsers) -->
+<!-- _includes/projects.html — wrapper for CSS Grid layout on /projects/ page -->
 <div class="grid-sizer"></div>
 <div class="grid-item">
-  <div class="card hoverable h-100 project-card-shell d-flex flex-column">
-    {% if project.redirect -%}
-    <a class="project-card-main text-reset text-decoration-none flex-grow-1 d-flex flex-column" href="{{ project.redirect }}">
-    {% elsif project.website -%}
-    <a class="project-card-main text-reset text-decoration-none flex-grow-1 d-flex flex-column" href="{{ project.website }}" target="_blank" rel="noopener noreferrer">
-    {%- elsif project.url -%}
-    <a class="project-card-main text-reset text-decoration-none flex-grow-1 d-flex flex-column" href="{{ project.url | relative_url }}">
-    {%- else -%}
-    <a class="project-card-main text-reset text-decoration-none flex-grow-1 d-flex flex-column" href="#">
-    {%- endif %}
-        {%- if project.img %}
-        {%- include figure.html
-          path=project.img
-          alt="project thumbnail" -%}
-        {%- else %}
-        <div class="card-img-placeholder"></div>
-        {%- endif %}
-        <div class="card-body">
-          <h2 class="card-title project-card-title">{{ project.title }}</h2>
-          <p class="card-text">{{ project.description }}</p>
-          {%- if project.tags -%}
-          <div class="project-tags mb-2">
-            {%- for tag in project.tags -%}
-            <span class="badge badge-secondary mr-1">{{ tag }}</span>
-            {%- endfor %}
-          </div>
-          {%- endif %}
-        </div>
-    </a>
-    <div class="project-card-actions px-3 pb-3 pt-0 d-flex align-items-center border-0 bg-transparent">
-      {%- if project.github -%}
-      <div class="github-icon">
-        <div class="icon" data-toggle="tooltip" title="Code Repository">
-          <a href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" class="text-reset"><i class="fab fa-github gh-icon"></i></a>
-        </div>
-        {%- if project.github_stars -%}
-        <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-          <i class="fas fa-star"></i>
-          <span id="{{ project.github_stars }}-stars"></span>
-        </span>
-        {%- endif %}
-      </div>
-      {%- endif %}
-      {%- if project.website -%}
-      <div class="website-icon ml-2">
-        <div class="icon" data-toggle="tooltip" title="View Project">
-          <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" class="text-reset"><i class="fas fa-external-link-alt"></i></a>
-        </div>
-      </div>
-      {%- endif %}
-    </div>
-  </div>
+  {% include project_card.html %}
 </div>

@@ -7,7 +7,7 @@ importance: 1
 category: student-work
 github: anfelipecb/AI-Augmetnted-Deliberative-Committee
 website: https://ai-augmetnted-deliberative-committee-hpic.streamlit.app/
-tags: [python, ai-agents, llm, policy]
+tags: [ai-agents, ml, research]
 year: 2025
 ---
 

@@ -7,7 +7,7 @@ importance: 0
 category: student-work
 github: anfelipecb/conflict-prediction-ml
 website: https://climate-conflict-ml.vercel.app/
-tags: [python, machine-learning, geospatial, satellite, jupyter, policy]
+tags: [ml, geospatial, research]
 year: 2025
 ---
 
