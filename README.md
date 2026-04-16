@@ -37,7 +37,7 @@ cd anfelipecb.github.io
 docker compose up
 ```
 
-3. Open your browser to `http://localhost:8080`
+3. Open your browser to `http://localhost:4000`
 
 The site will automatically rebuild when you make changes to files.
 
@@ -128,7 +128,7 @@ tags: [tag1, tag2, tag3]
 
 ### Updating CV
 
-- Replace `assets/pdf/Camacho_Andres_CV_2026.pdf` with your CV
+- Replace `assets/pdf/Camacho_CV_Base.pdf` with your CV
 - Update the link in `_pages/about.md`
 
 ### Color Scheme
@@ -213,10 +213,10 @@ Edit files in `_layouts/` to change page structure:
 
 ### Port Already in Use
 
-If port 8080 is occupied:
+The compose file maps **host port 4000** to the Jekyll server in the container. If `4000` is taken, edit `docker-compose.yml` and change the first number, e.g. `"4001:8080"`, then open `http://localhost:4001`.
+
 ```bash
 docker compose down
-# Wait a few seconds
 docker compose up
 ```
 

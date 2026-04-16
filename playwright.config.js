@@ -1,0 +1,1 @@
+const{defineConfig:defineConfig}=require("@playwright/test");module.exports=defineConfig({testDir:"./e2e",timeout:6e4,use:{baseURL:process.env.PLAYWRIGHT_BASE_URL||"http://127.0.0.1:4000",trace:"on-first-retry"}});

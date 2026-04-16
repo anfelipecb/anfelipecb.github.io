@@ -1,1 +1,1 @@
-$(document).ready(function(){var r=$(".grid").not(".selected-work-grid").masonry({gutter:10,horizontalOrder:!0,itemSelector:".grid-item",columnWidth:".grid-sizer",percentPosition:!0});r.imagesLoaded().progress(function(){r.masonry("layout")})});
+$(document).ready(function(){var e=$(".grid").not(".selected-work-grid").not(".projects-page-grid");e.length&&(e.masonry({gutter:10,horizontalOrder:!0,itemSelector:".grid-item",columnWidth:".grid-sizer",percentPosition:!0}),e.imagesLoaded().progress(function(){e.masonry("layout")}))});
