@@ -3,11 +3,11 @@ layout: page
 title: From Roots to Removals
 description: Interactive data visualization exploring migrations and deportations in the United States through historical trends and enforcement patterns
 img: assets/img/migrationinteractive.webm
-importance: 0
-category: work
+importance: 3
+category: student-work
 github: anfelipecb/migr_deport_interactive
 website: https://anfelipecb.github.io/migr_deport_interactive/
-tags: [data-visualization, d3.js, policy, immigration, storytelling]
+tags: [python, javascript, d3, geospatial, policy, data-visualization]
 year: 2025
 ---
 

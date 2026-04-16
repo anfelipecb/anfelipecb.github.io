@@ -54,7 +54,7 @@ navbar_fixed: true
 footer_fixed: false
 
 # Dimensions
-max_width: 1000px
+max_width: 1200px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -107,7 +107,7 @@ zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
 contact_note: >
-  Feel free to contact me by mail or twitter.
+  Feel free to contact me by email or LinkedIn.
 
 
 # -----------------------------------------------------------------------------

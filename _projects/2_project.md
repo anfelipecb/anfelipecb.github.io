@@ -3,10 +3,10 @@ layout: page
 title: Green Space Accessibility for Affordable Housing
 description: Interactive dashboard analyzing disparities in access to high-quality public parks near affordable housing buildings in Chicago
 img: assets/img/ProjectDemo.webm
-importance: 2
-category: work
+importance: 5
+category: student-work
 github: uchicago-2025-capp30122/30122-project-treehuggers
-tags: [spatial-analysis, policy, data-visualization, python, dash, gis]
+tags: [python, dash, gis, spatial-analysis, policy]
 year: 2025
 ---
 

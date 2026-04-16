@@ -368,9 +368,20 @@ blockquote {
         opacity: 0.5;
       }
 
+      svg {
+        fill: var(--global-text-color);
+        opacity: 0.5;
+        transition: all 0.2s ease-in-out;
+      }
+
       &:hover {
         i::before {
           color: var(--global-theme-color);
+        }
+
+        svg {
+          fill: var(--global-theme-color);
+          opacity: 1;
         }
       }
     }
@@ -589,6 +600,8 @@ footer.sticky-bottom {
 
 .projects {
   margin-top: 2rem; // Match spacing with publications section
+  max-width: 100%;
+  box-sizing: border-box;
   
   a {
     text-decoration: none;
@@ -621,19 +634,19 @@ footer.sticky-bottom {
       font-size: 0.7rem;
       padding: 0.25em 0.5em;
       font-weight: 500;
-      background-color: #DC2626 !important; // Intense red with !important to override other styles
+      background-color: #DC2626 !important;
       color: white !important;
       border-radius: 3px;
     }
   }
 
-  // Dark mode glow effect for theme color
+  // Dark mode badge
   html[data-theme='dark'] & {
     .project-tags .badge {
-      background-color: #0990ce !important; // Cyan blue for dark mode
+      background-color: #0990ce !important;
       box-shadow: 0 0 10px rgba(9, 144, 206, 0.3);
     }
-    
+
     a:hover {
       color: var(--global-theme-color);
       text-shadow: 0 0 8px var(--global-theme-color-glow, rgba(255, 142, 142, 0.3));
@@ -646,49 +659,91 @@ footer.sticky-bottom {
     margin-bottom: 10px;
   }
 
-  // Selected work container - Bootstrap grid
-  .selected-work-container {
+  // Selected work container - Bootstrap grid (& = same element, not descendant)
+  &.selected-work-container {
     .card {
       height: 100%;
       margin-bottom: 0;
     }
-    
-    // Consistent image/video height across all cards
-    .card img,
-    .card video {
-      max-width: 100%;
-      height: 220px;
-      object-fit: cover;
+
+    // Fixed media area — image is protagonist, uniform height
+    .card figure {
+      margin: 0;
+      height: 180px;
+      overflow: hidden;
       display: block;
+      background-color: #f5f3f0;
+    }
+
+    .card figure picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card figure img,
+    .card video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: none;
+      object-fit: contain;
+      min-height: 0;
+    }
+
+    html[data-theme='dark'] & .card figure {
+      background-color: #2a2a2e;
     }
     
-    // Reduce card body padding
+    // Compact card body — text is secondary to image
     .card-body {
-      padding: 0.9rem !important;
+      padding: 0.4rem 0.5rem !important;
     }
-    
-    // Reduce title size
+
+    // Small title — clamped to 2 lines max
     .card-title {
-      font-size: 1rem !important;
-      margin-bottom: 0.5rem !important;
-      line-height: 1.3 !important;
+      font-size: 0.6rem !important;
+      margin-bottom: 0.15rem !important;
+      line-height: 1.2 !important;
+      font-weight: 600 !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
     }
-    
-    // Reduce description size
+
+    // Compact description — clamped to 2 lines max
     .card-text {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-bottom: 0.5rem !important;
+      font-size: 0.5rem !important;
+      line-height: 1.25 !important;
+      margin-bottom: 0.2rem !important;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-    
-    // Reduce tag sizes
+
+    // Compact tags
     .project-tags {
-      margin-bottom: 0.5rem !important;
-      
+      margin-bottom: 0.2rem !important;
+
       .badge {
-        font-size: 0.6rem !important;
-        padding: 0.2em 0.4em !important;
+        font-size: 0.45rem !important;
+        padding: 0.1em 0.3em !important;
       }
+    }
+
+    // Placeholder for cards without images
+    .card-img-placeholder {
+      height: 180px;
+      background: linear-gradient(135deg, #f5f3f0 0%, #ebe8e4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    html[data-theme='dark'] & .card-img-placeholder {
+      background: linear-gradient(135deg, #2a2a2e 0%, #1e1e22 100%);
     }
   }
   
@@ -766,29 +821,128 @@ footer.sticky-bottom {
     }
   }
 
-  // Projects page grid - 3 columns
-  .projects .grid {
+  // Project card titles: render as-is from frontmatter (preserves "AI", acronyms, etc.)
+  .project-card-title {
+    // no text-transform — titles use the casing from _projects/*.md
+  }
+
+  // Projects page: CSS grid — 3 equal columns (nested under .projects → single .projects ancestor)
+  .projects-page-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    overflow-x: clip;
+
     .grid-sizer {
-      width: calc(33.333% - 10px);
+      display: none;
     }
-    
+
     .grid-item {
-      width: calc(33.333% - 10px);
-      margin: 5px;
+      width: 100% !important;
+      max-width: 100%;
+      margin: 0 !important;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+
+      > a {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 100%;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .card-body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0.6rem !important;
+      }
+
+      .card-title {
+        font-size: 0.7rem !important;
+        margin-bottom: 0.2rem !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+
+      .card-text {
+        flex: 1 1 auto;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        font-size: 0.58rem !important;
+        line-height: 1.3 !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .project-tags .badge {
+        font-size: 0.5rem !important;
+        padding: 0.15em 0.3em !important;
+      }
+
+      .card figure {
+        margin: 0;
+        height: 160px;
+        overflow: hidden;
+        display: block;
+        background-color: #f5f3f0;
+      }
+
+      .card figure picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card figure img,
+      .card video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+        min-height: 0;
+      }
+
+      .card-img-placeholder {
+        height: 160px;
+        background: linear-gradient(135deg, #f5f3f0 0%, #ebe8e4 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
-    
+
     @media (max-width: 992px) {
-      .grid-sizer,
-      .grid-item {
-        width: calc(50% - 10px);
-      }
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    
+
     @media (max-width: 576px) {
-      .grid-sizer,
-      .grid-item {
-        width: calc(100% - 10px);
-      }
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 
@@ -798,7 +952,17 @@ footer.sticky-bottom {
     padding-top: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    text-align: right;
+    text-align: left;
+    width: 100%;
+    clear: both;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .project-filters {
+    max-width: 100%;
   }
 }
 

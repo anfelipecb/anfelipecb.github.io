@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+
+# Ruby 4.0+: stdlib ostruct is no longer default; jekyll-twitter-plugin still requires it
+gem 'ostruct'
+
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'

@@ -4,15 +4,15 @@
 <figure>
   {%- if file_ext == "webm" or file_ext == "mp4" or file_ext == "gif" -%}
     <!-- Video/Animated content -->
-    <video 
+    <video
       {% if include.class %}class="{{ include.class }}"{% endif %}
-      autoplay 
-      loop 
-      muted 
+      autoplay
+      loop
+      muted
       playsinline
       {% if include.width %}width="{{ include.width }}"{% endif %}
       {% if include.height %}height="{{ include.height }}"{% endif %}
-      style="width: 100%; height: auto;"
+      style="width: 100%; height: 100%; object-fit: contain;"
     >
       {%- if file_ext == "gif" -%}
         <!-- Try webm first if available, fallback to gif -->
@@ -25,7 +25,6 @@
       <img
         src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
         {% if include.alt %}alt="{{ include.alt }}"{% endif %}
-        style="width: 100%; height: auto;"
       />
     </video>
   {%- else -%}

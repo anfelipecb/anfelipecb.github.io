@@ -5,7 +5,7 @@ permalink: /projects/
 description: A collection of data science and policy projects.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [work, student-work]
 horizontal: false
 ---
 
@@ -29,7 +29,7 @@ horizontal: false
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
+  <h2 class="category">{% case category %}{% when 'work' %}Work{% when 'student-work' %}Student work{% when 'fun' %}Fun{% else %}{{ category | replace: '-', ' ' }}{% endcase %}</h2>
   {%- assign categorized_projects = site.projects | where: "category", category -%}
   {%- assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
@@ -42,7 +42,7 @@ horizontal: false
     </div>
   </div>
   {%- else -%}
-  <div class="grid">
+  <div class="grid projects-page-grid">
     {%- for project in sorted_projects -%}
       {% include projects.html %}
     {%- endfor %}
@@ -63,7 +63,7 @@ horizontal: false
     </div>
   </div>
   {%- else -%}
-  <div class="grid">
+  <div class="grid projects-page-grid">
     {%- for project in sorted_projects -%}
       {% include projects.html %}
     {%- endfor %}

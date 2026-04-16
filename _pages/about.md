@@ -160,8 +160,8 @@ social: true  # includes social icons at the bottom of the page
         <i class="fab fa-github"></i> GitHub
       </a>
     </p>
-    <p><strong>Data Scientist & ML Engineer</strong> | <em>Machine Learning for Social Impact</em></p>
-    <p>Data scientist and economist with 8+ years of experience building ML models and data pipelines for policy impact. Currently pursuing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, where I serve as a Teaching Assistant for Computer Science with Applications and Data Science Clinic. I specialize in machine learning, spatial analytics, and large-scale data processing using <code>Python, SQL, PyTorch, AWS, and Google Cloud</code>. My work focuses on developing predictive models and scalable systems that inform evidence-based policy decisions in criminal justice, education, and climate change.</p>
+    <p><strong>Spatial Data Scientist & Economist</strong> | <em>Building ML Systems for Social Impact</em></p>
+    <p>Spatial data scientist and economist with 8+ years of experience building ML models, geospatial pipelines, and data infrastructure. Currently completing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, where I serve as a Teaching Assistant for Machine Learning, Computer Science with Applications, and Data Science Clinic. I work across the full stack of data science: ensemble ML models for conflict prediction, multi-agent LLM systems for policy deliberation, satellite imagery pipelines, and interactive visualizations, all using <code>Python, PyTorch, SQL, AWS, and Google Cloud</code>. My research on climate impacts on child development has been published in peer-reviewed journals.</p>
     
     <div class="expertise-section">
       <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Areas of Expertise</h3>
@@ -176,7 +176,7 @@ social: true  # includes social icons at the bottom of the page
   const expertise = [
     {
       title: "Machine Learning & AI",
-      description: "Building predictive models using PyTorch, developing ML systems for recidivism risk prediction, and deploying AI solutions for policy applications."
+      description: "Building ensemble ML models and multi-agent LLM systems using PyTorch and Anthropic/HuggingFace APIs. Experience spans conflict prediction with satellite imagery (92.3% accuracy), AI-augmented policy deliberation with Claude Opus/Haiku, and adversarial persona simulation with quantized open-source models."
     },
     {
       title: "Spatial Data Science",
@@ -192,7 +192,7 @@ social: true  # includes social icons at the bottom of the page
     },
     {
       title: "Teaching & Mentorship",
-      description: "Teaching Assistant at University of Chicago for Computer Science with Applications and Data Science Clinic. Previously instructor of Spatial Analytics in Python & ArcGIS at Universidad de los Andes."
+      description: "Teaching Assistant at University of Chicago for Machine Learning, Computer Science with Applications, and Data Science Clinic. Previously instructor of Spatial Analytics in Python & ArcGIS at Universidad de los Andes."
     }
   ];
 
@@ -238,4 +238,4 @@ social: true  # includes social icons at the bottom of the page
     });
 </script>
 
-You can find my updated CV [here](assets/pdf/Camacho_Andres_CV_2026.pdf)
+You can find my updated CV [here](assets/pdf/Camacho_CV_Base.pdf)
