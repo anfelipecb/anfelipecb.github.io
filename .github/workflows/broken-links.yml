@@ -73,9 +73,12 @@ jobs:
         with:
           fail: true
           # Excludes: font-CDN preconnect roots (not real pages, present on every
-          # page) and a relative LICENSE link inside an al-folio sample post
+          # page) and a relative LICENSE link inside an al-folio sample post.
+          # TODO: remove the streamlit.app exclude once the AI Deliberative
+          # Committee app is awake/public again (currently redirects to login).
           args: >-
             --user-agent 'curl/7.54' --verbose --no-progress
             --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
             --exclude 'blob/master/LICENSE'
+            --exclude 'ai-augmetnted-deliberative-committee-hpic\.streamlit\.app'
             '_site/**/*.html'
