@@ -5,7 +5,6 @@ description: XGBoost risk models (AUC 0.77-0.89) built at the Attorney General o
 img: assets/img/Prisma.png
 importance: 6
 category: work
-website: https://anfelipecb.github.io/assets/pdf/Prisma%20Paper%20VEng.pdf
 tags: [ml, research]
 year: 2024
 ---
