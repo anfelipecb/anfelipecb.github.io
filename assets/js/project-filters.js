@@ -7,7 +7,8 @@
     'geospatial': '#2D9596',
     'data-viz': '#4ECDC4',
     'devops': '#06B6D4',
-    'research': '#AA96DA'
+    'research': '#AA96DA',
+    'software': '#F59E0B'
   };
 
   var tagDisplayNames = {
@@ -16,7 +17,8 @@
     'geospatial': 'Geospatial',
     'data-viz': 'Data Viz',
     'devops': 'DevOps',
-    'research': 'Research'
+    'research': 'Research',
+    'software': 'Software Eng'
   };
 
   function getTagColor(tag) { return tagColors[tag] || '#95A5A6'; }

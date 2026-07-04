@@ -18,3 +18,9 @@ playwright-report/
 test-results/
 .playwright-mcp/
 
+
+# Local application-strategy notes (never publish)
+/projects.md
+
+# Playwright review screenshots (session artifacts)
+/review-*.png

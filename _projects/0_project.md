@@ -3,7 +3,7 @@ layout: page
 title: From Roots to Removals
 description: Winner, UChicago Mind Bytes Data Visualization Challenge. Interactive scrollytelling on U.S. migration and deportation from historical trends to enforcement flows.
 img: assets/img/migrationinteractive.webm
-importance: 3
+importance: 4
 category: student-work
 github: anfelipecb/migr_deport_interactive
 website: https://anfelipecb.github.io/migr_deport_interactive/

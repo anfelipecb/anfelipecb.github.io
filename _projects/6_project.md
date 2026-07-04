@@ -3,7 +3,7 @@ layout: page
 title: Event-Driven E-Commerce Architecture
 description: Microservices e-commerce platform with asynchronous order processing using Redis Streams, FastAPI gateway, and React frontend with real-time Server-Sent Events
 img: assets/img/EventDriven.png
-importance: 6
+importance: 8
 category: student-work
 github: anfelipecb/ecommerce_event_driven
 tags: [devops]
