@@ -72,4 +72,10 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          args: --user-agent 'curl/7.54' --verbose --no-progress '_site/**/*.html'
+          # Excludes: font-CDN preconnect roots (not real pages, present on every
+          # page) and a relative LICENSE link inside an al-folio sample post
+          args: >-
+            --user-agent 'curl/7.54' --verbose --no-progress
+            --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
+            --exclude 'blob/master/LICENSE'
+            '_site/**/*.html'
