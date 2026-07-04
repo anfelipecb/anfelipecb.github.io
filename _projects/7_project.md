@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DevOps Pipeline for Microservices Platform
-description: Production-grade CI/CD pipeline with Git Flow, Jenkins, Docker, Terraform, Kubernetes (3 environments), and Prometheus/Grafana monitoring for a microservices e-commerce platform
+description: Production-grade CI/CD pipeline with Jenkins, Docker, Terraform, Kubernetes, and Prometheus/Grafana monitoring for a microservices e-commerce platform
 img: assets/img/FinalPrDevVOps.png
 importance: 9
 category: student-work

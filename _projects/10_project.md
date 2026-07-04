@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PRiSMA, Recidivism Risk Prediction for Pretrial Detention
-description: XGBoost risk models (AUC 0.77-0.89) built at the Attorney General of Colombia on 994K criminal events across 3 national databases to support prosecutors' pretrial detention decisions
+description: XGBoost risk models (AUC 0.77-0.89) built at the Attorney General of Colombia on 994K criminal events, supporting prosecutors' pretrial detention decisions
 img: assets/img/Prisma.png
 importance: 6
 category: work

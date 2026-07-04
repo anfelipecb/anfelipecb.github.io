@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AI-Augmented Deliberative Committee
-description: Multi-agent deliberation system using Claude Opus/Haiku with 7 expert jurors and 8 demographically-grounded community stakeholders (ACS 2022) to evaluate Chicago urban policy proposals
+description: Multi-agent deliberation system using Claude, with 7 expert jurors and 8 census-grounded community stakeholders evaluating Chicago urban policy proposals
 img: assets/img/AiCommittee.webm
 importance: 1
 category: student-work

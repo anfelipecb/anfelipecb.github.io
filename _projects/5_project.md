@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adversarial AI Committees for Competency Development
-description: Personalized multi-agent feedback system using Qwen2.5-7B (4-bit quantized) that matches adversarial personas to student thesis weaknesses across 6 competency dimensions, achieving 4.15-point improvement in methodological reasoning
+description: Multi-agent feedback system matching adversarial AI personas to student thesis weaknesses, improving methodological reasoning by 4.15 points across 345 memos
 img: assets/img/Adversarial.png
 importance: 2
 category: student-work

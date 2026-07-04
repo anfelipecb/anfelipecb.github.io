@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ML and Satellite Imagery for Conflict Prediction
-description: Ensemble ML pipeline (RF, NN, KNN) achieving 92.3% accuracy and 0.93 ROC AUC to predict violent conflict across 50km grid cells continent-wide using ERA5 climate, UCDP events, and NASA VIIRS data
+description: Ensemble ML pipeline (RF, NN, KNN) achieving 92.3% accuracy and 0.93 ROC AUC, predicting violent conflict across Africa from satellite, climate, and socioeconomic data
 img: assets/img/MLCaseConflict.webm
 importance: 0
 category: student-work
