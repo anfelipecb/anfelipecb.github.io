@@ -366,7 +366,7 @@ enable_cronitor_analytics: false  # enables cronitor RUM analytics
 enable_google_verification: true  # enables google site verification
 enable_bing_verification:   false  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement
-enable_math:                true   # enables math typesetting (uses MathJax)
+enable_math:                false  # global math off; use page.math: true on posts that need MathJax
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
 enable_darkmode:            true   # enables switching between light/dark modes
@@ -383,6 +383,15 @@ enable_progressbar:         true   # enables a horizontal progress bar linked to
 
 bootstrap-table:
   version: "1.22.1"
+  integrity:
+    css: "sha384-sN3NwxbjH33ZidqZnPmX+nQ5IF+LoiI7HvZSoZj5wGacmu0/q4RJfsN0xqN+LIa5"
+    js: "sha384-GVLHfbEvuGA/RFiQ3MK2ClEJkWYJXABg55t9LpoDPZFGIsSq8xhFlQydm5poV2jW"
+imagesloaded:
+  version: "4"
+  integrity: "sha384-YnGSHPPWEUDKMHFPOVmNP7Xyfwx5G0CHet6IoNgiX6CbFZS8gCeIfEgB1MgPwjdI"
+d3:
+  version: "7"
+  integrity: "sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i"
 jquery:
   version: "3.6.0"
   integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

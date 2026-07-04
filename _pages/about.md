@@ -161,7 +161,7 @@ social: true  # includes social icons at the bottom of the page
       </a>
     </p>
     <p><em>Building ML Systems for Social Impact</em></p>
-    <p>Spatial data scientist and economist with 8+ years of experience building ML models, geospatial pipelines, and data infrastructure. Currently completing an MS in Computational Analysis & Public Policy at the <a href="https://capp.uchicago.edu/">University of Chicago</a>, where I serve as a Teaching Assistant for Machine Learning, Computer Science with Applications, and Data Science Clinic. I work across the full stack of data science: ensemble ML models for conflict prediction, multi-agent LLM systems for policy deliberation, satellite imagery pipelines, and interactive visualizations, all using <code>Python, PyTorch, SQL, AWS, and Google Cloud</code>. My research on climate impacts on child development has been published in peer-reviewed journals.</p>
+    <p>Spatial data scientist and economist with 8+ years of experience building ML models, geospatial pipelines, and data infrastructure. MS in Computational Analysis & Public Policy from the <a href="https://capp.uchicago.edu/">University of Chicago</a> (2026), where I served as a Teaching Assistant for Machine Learning, Computer Science with Applications, and Data Science Clinic. I work across the full stack of data science: ensemble ML models for conflict prediction, multi-agent LLM systems for policy deliberation, satellite imagery pipelines, and interactive visualizations, all using <code>Python, PyTorch, SQL, AWS, and Google Cloud</code>. My research on climate impacts on child development has been published in peer-reviewed journals.</p>
     
     <div class="expertise-section">
       <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Areas of Expertise</h3>
@@ -171,7 +171,7 @@ social: true  # includes social icons at the bottom of the page
   </div>
 </div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@{{ site.d3.version }}/dist/d3.min.js" integrity="{{ site.d3.integrity }}" crossorigin="anonymous"></script>
 <script>
   const expertise = [
     {
@@ -192,7 +192,7 @@ social: true  # includes social icons at the bottom of the page
     },
     {
       title: "Teaching & Mentorship",
-      description: "Teaching Assistant at University of Chicago for Machine Learning, Computer Science with Applications, and Data Science Clinic. Previously instructor of Spatial Analytics in Python & ArcGIS at Universidad de los Andes."
+      description: "Served as Teaching Assistant at University of Chicago for Machine Learning, Computer Science with Applications, and Data Science Clinic. Previously instructor of Spatial Analytics in Python & ArcGIS at Universidad de los Andes."
     }
   ];
 

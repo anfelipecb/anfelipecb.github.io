@@ -1,7 +1,7 @@
 ---
 layout: page
 title: From Roots to Removals
-description: Interactive data visualization exploring migrations and deportations in the United States through historical trends and enforcement patterns
+description: Winner, UChicago Mind Bytes Data Visualization Challenge. Interactive scrollytelling on U.S. migration and deportation from historical trends to enforcement flows.
 img: assets/img/migrationinteractive.webm
 importance: 3
 category: student-work
@@ -13,7 +13,7 @@ year: 2025
 
 ## Overview
 
-**From Roots to Removals** is an interactive data visualization that explores the complex relationship between immigration and deportation in the United States. This storytelling project traces the journey of migrants from historical immigration patterns (1850-2024) through the modern deportation pipeline, revealing the human impact of enforcement policies.
+**From Roots to Removals** is an interactive data visualization that explores the complex relationship between immigration and deportation in the United States. This storytelling project traces the journey of migrants from historical immigration patterns (1850-2024) through the modern deportation pipeline, revealing the human impact of enforcement policies. The project won the [UChicago Mind Bytes Data Visualization Challenge](https://mindbytes.uchicago.edu/vis-challenge/).
 
 ## What It Does
 
